@@ -1,10 +1,9 @@
 var express = require('express');
-const dotenv = require('dotenv');
 app = express();
 server = require('http').createServer(app);
 io =  require('socket.io').listen(server);
 usernames = [];
-server.listen(process.env.PORT||3000);
+server.listen(3000);
 console.log("server is running");
 
 app.get('/',function(req,res){
